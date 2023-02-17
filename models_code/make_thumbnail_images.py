@@ -31,11 +31,11 @@ if not os.path.isdir(TEST_THUMBNAIL_PATH):
     os.makedirs(TEST_THUMBNAIL_PATH)
 
 
-print('making train videos thumbnail...')
-for video in tqdm(train_videos):
-    file_name = video[:-4]
-    os.popen(
-        f'ffmpeg -hide_banner -loglevel error -y  -i {TRAIN_VIDEO_PATH}{video} -vframes 1 -vf thumbnail=50 {TRAIN_THUMBNAIL_PATH}{file_name}.jpg')
+# print('making train videos thumbnail...')
+# for video in tqdm(train_videos):
+#     file_name = video[:-4]
+#     os.popen(
+#         f'ffmpeg -hide_banner -loglevel error -y  -i {TRAIN_VIDEO_PATH}{video} -vframes 1 -vf thumbnail=50 {TRAIN_THUMBNAIL_PATH}{file_name}.jpg')
 
 print('making test videos thumbnail...')
 for video in tqdm(test_videos):
